@@ -1,9 +1,11 @@
 // Lab 3C
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Lab3C {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.##");
 
         double quarters, dimes, nickels, pennies, total;
 
@@ -24,7 +26,7 @@ public class Lab3C {
         print("\nYou entered " + (int) nickels + " nickels.");
         print("\nYou entered " + (int) pennies + " pennies.");
 
-        total = (quarters * 0.25) + (dimes * 0.10) + (nickels * 0.05) + (pennies * 0.01);
+        total = Double.valueOf(df.format((quarters * 0.25) + (dimes * 0.10) + (nickels * 0.05) + (pennies * 0.01)));
 
         print("\n\nYour total is " + (int) total + " dollars and " + (int) ((total - (int) total) * 100) + " cents.");
     }
