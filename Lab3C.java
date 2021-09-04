@@ -25,8 +25,9 @@ public class Lab3C {
         print("\nYou entered " + (int) pennies + " pennies.");
 
         total = Math.round(((quarters * 0.25) + (dimes * 0.10) + (nickels * 0.05) + (pennies * 0.01)) * 100.0) / 100.0;
+        System.out.print("\n" + total);
 
-        print("\n\nYour total is " + (int) total + " dollars and " + (int) ((total - (int) total) * 100) + " cents.");
+        print("\n\nYour total is " + (int) total + " dollars and " + Math.round(((total - (int) total) * 100)) + " cents.");
     }
 
     public static void print(String s) {
